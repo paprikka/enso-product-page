@@ -2,10 +2,14 @@
   font-size: 1rem;
   display: block;
   flex: 1;
-  margin: 0 calc(var(--baseline) * 3rem) calc(var(--baseline) * 2rem);
+  margin: 0 auto calc(var(--baseline) * 1rem);
   align-self: flex-start;
 
   a {
     text-decoration: underline;
+  }
+
+  @media all and (min-width: 415px) {
+    // margin: 0 calc(var(--baseline) * 3rem) calc(var(--baseline) * 2rem);
   }
 }

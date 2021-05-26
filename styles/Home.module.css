@@ -6,8 +6,3 @@
   align-items: center;
   width: 100%;
 }
-
-.fullBleed {
-  margin: calc(var(--baseline) * -2rem) 0 0 0;
-  width: 100vw;
-}

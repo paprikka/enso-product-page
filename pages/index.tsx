@@ -1,7 +1,8 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Fade } from "../components/fade";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
+import { Preview } from "../components/preview";
 import { ValueProp } from "../components/value-proposition";
 import styles from "../styles/Home.module.css";
 
@@ -19,23 +20,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <Hero />
-        <section>
-          <figure className={styles.fullBleed}>
-            <Image
-              className={styles.fullBleedImage}
-              width={752}
-              height={482}
-              src="/app-preview-light.png"
-              layout="responsive"
-            />
-          </figure>
-        </section>
+        <Preview />
         <ValueProp>
           <section>
+            <h3>It’s writing-focused.</h3>
             <p>
-              <strong>It’s writing-focused. </strong>The text fades away as you
-              type so you can focus on what you want to say istead of how you
-              want to say it.
+              The text <Fade text="fades away" /> as you type so you can focus
+              on what you want to say istead of how you want to say it.
             </p>
             <p>
               You can’t select or edit text, but you can download and review it
@@ -44,16 +35,14 @@ export default function Home() {
             <p>Annoying at first, this becomes a freeing experience.</p>
           </section>
           <section>
-            <p>
-              <strong>It's easy.</strong> You’re never more than 1 click from
-              starting to write.
-            </p>
+            <h3>It's easy.</h3>
+            <p>You’re never more than 1 click from starting to write.</p>
           </section>
           <section>
+            <h3>It's private.</h3>
             <p>
-              <strong>It's private.</strong> All of your changes are saved
-              locally. Ensō works perfectly fine even without internet
-              connecton.
+              All of your changes are saved locally. Ensō works perfectly fine
+              even without internet connecton.
             </p>
           </section>
         </ValueProp>

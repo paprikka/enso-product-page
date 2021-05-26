@@ -1,0 +1,33 @@
+.main {
+  margin: 0;
+  width: 100vw;
+  position: relative;
+  padding: calc(2054 / 2992 * 100%) 0 0;
+
+  @media all and (min-width: 415px) {
+    margin: 0 auto;
+    max-width: calc(var(--page-width) + 10rem);
+  }
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.5s opacity, 0.5s visibility;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &.isActive {
+    opacity: 1;
+    visibility: visible;
+  }
+}

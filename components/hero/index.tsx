@@ -17,7 +17,7 @@ export const Hero = () => (
         harder for you to edit yourself.
       </p>
 
-      <HGroup align="middle">
+      <HGroup>
         <ButtonLink
           level="primary"
           href="https://enso.sonnet.io"
