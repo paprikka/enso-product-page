@@ -1,0 +1,14 @@
+.buttonLink {
+  padding: calc(var(--baseline) * 0.5rem);
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: var(--font-ui);
+}
+
+.buttonLinkPrimary {
+  background-color: var(--color-primary);
+  color: var(--color-page);
+}
+
+.buttonLinkSecondary {
+}

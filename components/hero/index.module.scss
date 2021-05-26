@@ -1,0 +1,26 @@
+.container {
+  max-width: var(--page-width);
+  margin: 0 auto calc(var(--baseline) * 2rem);
+  padding: calc(var(--baseline) * 1rem);
+
+  @media all and (min-width: 415px) {
+    padding: 0;
+  }
+}
+
+.headline {
+  font-family: var(--font-header);
+  margin: 0;
+  font-size: 3rem;
+  line-height: calc(var(--baseline) * 2rem);
+
+  @media all and (min-width: 415px) {
+    font-size: 5rem;
+    line-height: calc(var(--baseline) * 1rem * 3);
+  }
+}
+
+.description {
+  font-size: calc(var(--baseline) * 1rem);
+  font-size: 1.5rem;
+}
