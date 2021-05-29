@@ -15,7 +15,7 @@ export default function Home() {
           name="description"
           content="Ensō is a writing tool that helps you enter a state of flow. Click to learn more."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.jpg" />
       </Head>
 
       <main className={styles.main}>
