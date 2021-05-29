@@ -22,17 +22,51 @@ layout="responsive"
 export const Preview = () => {
   const [mode, setMode] = useState<Mode>("minimal");
 
+  const [isOver, setIsOver] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  const toggleDark = () => setIsDark(!isDark);
   return (
     <section
-      className={styles["mode-" + mode]}
-      onMouseOver={() => setMode("light")}
-      onMouseOut={() => setMode("minimal")}
-      onMouseDown={() => setMode("dark")}
+      onMouseOver={() => setIsOver(true)}
+      onMouseOut={() => setIsOver(false)}
+      onClick={toggleDark}
     >
       <div className={styles.main}>
-        <Image isActive={mode === "light"} src="/app-preview-light.png" />
-        <Image isActive={mode === "minimal"} src="/app-preview-minimal.png" />
-        <Image isActive={mode === "dark"} src="/app-preview-dark.png" />
+        <div
+          className={`${styles.screen} ${isDark ? styles["screen--dark"] : ""}`}
+        >
+          <div className={styles.window}>
+            <div className={styles.titleBar}>
+              <div className={styles.dot} />
+              <div className={styles.dot} />
+              <div className={styles.dot} />
+            </div>
+            <div className={styles.windowContent}>
+              <div
+                className={`${styles.tip} ${isDark ? styles["tip--dark"] : ""}`}
+                hidden={!isOver}
+              >
+                <button>{isDark ? "Disable" : "Enable"} dark mode</button>
+              </div>
+              <Image
+                isActive={!isDark && isOver}
+                src="/app-preview-light.png"
+              />
+              <Image
+                isActive={!isDark && !isOver}
+                src="/app-preview-minimal.png"
+              />
+              <Image isActive={isDark && isOver} src="/app-preview-dark.png" />
+              <Image
+                isActive={isDark && !isOver}
+                src="/app-preview-dark-minimal.png"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* <div className={styles.switcher} onClick={toggleDark} /> */}
       </div>
     </section>
   );
