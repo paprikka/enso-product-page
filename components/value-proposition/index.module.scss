@@ -3,10 +3,11 @@
   margin: calc(var(--baseline) * 1rem) auto;
   padding: 0 calc(var(--baseline) * 1rem);
 
-  h3 {
+  h2 {
     font-size: 1.5rem;
     line-height: calc(var(--baseline) * 1rem);
     margin: 0;
+    font-weight: 600;
   }
 
   @media all and (min-width: 415px) {

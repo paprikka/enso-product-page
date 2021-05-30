@@ -16,6 +16,10 @@ export default function Home() {
           content="Ensō is a writing tool that helps you enter a state of flow. Click to learn more."
         />
         <link rel="icon" href="/favicon.jpg" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main className={styles.main}>
@@ -23,7 +27,7 @@ export default function Home() {
         <Preview />
         <ValueProp>
           <section>
-            <h3>It’s writing-focused.</h3>
+            <h2>It’s writing-focused.</h2>
             <p>
               The text <Fade text="fades away" /> as you type so you can focus
               on what you want to say istead of how you want to say it.
@@ -35,11 +39,11 @@ export default function Home() {
             <p>Annoying at first, this becomes a freeing experience.</p>
           </section>
           <section>
-            <h3>It's easy.</h3>
+            <h2>It's easy.</h2>
             <p>You’re never more than 1 click from starting to write.</p>
           </section>
           <section>
-            <h3>It's private.</h3>
+            <h2>It's private.</h2>
             <p>
               All of your changes are saved locally. Ensō works perfectly fine
               even without internet connecton.
