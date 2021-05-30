@@ -8,7 +8,15 @@
 .buttonLinkPrimary {
   background-color: var(--color-primary);
   color: var(--color-page);
+  transition: 0.2s opacity;
+
+  &:hover {
+    opacity: 0.9;
+  }
 }
 
 .buttonLinkSecondary {
+  &:hover {
+    text-decoration: underline;
+  }
 }

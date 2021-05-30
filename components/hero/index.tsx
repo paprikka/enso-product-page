@@ -23,7 +23,7 @@ export const Hero = () => (
           href="https://enso.sonnet.io"
           label="try it for yourself"
         />
-        <ButtonLink href="https://enso.sonnet.io" label="learn more" />
+        <ButtonLink href="https://sonnet.io/posts/ulysses" label="learn more" />
       </HGroup>
     </section>
   </section>
