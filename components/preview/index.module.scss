@@ -20,8 +20,8 @@
   visibility: hidden;
 
   transition: 0.3s opacity linear, 0.3s visibility linear;
-  border-bottom-left-radius: 1vw;
-  border-bottom-right-radius: 1vw;
+  border-bottom-left-radius: var(--window-radius);
+  border-bottom-right-radius: var(--window-radius);
   overflow: hidden;
 
   img {
@@ -85,6 +85,7 @@
   --title-bar-bg-color: #f2f3f3;
   --title-bar-box-shadow: rgba(0, 0, 0, 0.2);
   --dot-color: rgba(0, 0, 0, 0.15);
+  --window-radius: 1vw;
 
   &--dark {
     --content-bg-color: #212121;
@@ -95,11 +96,12 @@
 
   @media all and (min-width: 415px) {
     padding: 0 2rem calc(var(--baseline) * 3rem);
+    --window-radius: 0.6rem;
   }
 }
 
 .window {
-  border-radius: 1vw;
+  border-radius: var(--window-radius);
   box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2), 0 3px 8px rgba(0, 0, 0, 0.05),
     0 0 0 1px rgba(0, 0, 0, 0.15);
 
