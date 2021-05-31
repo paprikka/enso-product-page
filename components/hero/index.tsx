@@ -21,9 +21,9 @@ export const Hero = () => (
         <ButtonLink
           level="primary"
           href="https://enso.sonnet.io"
-          label="try it for yourself"
+          label="Try it for yourself"
         />
-        <ButtonLink href="https://sonnet.io/posts/ulysses" label="learn more" />
+        <ButtonLink href="https://sonnet.io/posts/ulysses" label="Learn more" />
       </HGroup>
     </section>
   </section>

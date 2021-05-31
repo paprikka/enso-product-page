@@ -1,8 +1,12 @@
 .buttonLink {
-  padding: calc(var(--baseline) * 0.5rem);
+  padding: calc(var(--baseline) * 0.5rem) 1rem;
   font-weight: 600;
   font-size: 1rem;
   font-family: var(--font-ui);
+  justify-content: space-between;
+  @media all and (min-width: 415px) {
+    margin-right: 1rem;
+  }
 }
 
 .buttonLinkPrimary {

@@ -8,7 +8,7 @@ type Props = {
 export const HGroup: FC<Props> = ({ children, align }: Props) => (
   <div
     className={`${styles.container} ${
-      styles["container--" + align || "default"]
+      styles["container--" + (align || "default")]
     }`}
   >
     {children}

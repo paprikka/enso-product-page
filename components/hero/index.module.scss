@@ -23,4 +23,8 @@
 .description {
   font-size: calc(var(--baseline) * 1rem);
   font-size: 1.5rem;
+
+  p:last-of-type {
+    margin-bottom: calc(var(--baseline) * 1rem * 2);
+  }
 }
