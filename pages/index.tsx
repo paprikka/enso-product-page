@@ -36,11 +36,9 @@ export default function Home() {
               You can’t select or edit text, but you can download and review it
               once you’re done.
             </p>
-            <p>Annoying at first, this becomes a freeing experience.</p>
           </section>
           <section>
             <h2>It's easy.</h2>
-            <p>You’re never more than 1 click from starting to write.</p>
           </section>
           <section>
             <h2>It's private.</h2>
