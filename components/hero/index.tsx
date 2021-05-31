@@ -20,7 +20,7 @@ export const Hero = () => (
       <HGroup>
         <ButtonLink
           level="primary"
-          href="https://enso.sonnet.io"
+          href="https://write.sonnet.io"
           label="Try it for yourself"
         />
         <ButtonLink href="https://sonnet.io/posts/ulysses" label="Learn more" />
