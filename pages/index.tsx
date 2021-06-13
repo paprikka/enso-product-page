@@ -31,6 +31,11 @@ const SocialMeta: FC<SocialMetaProps> = (props: SocialMetaProps) => (
     <meta name="twitter:description" content={props.description} />
     <meta name="twitter:image" content={props.image} />
     <title> {props.title} </title>
+    <script
+      async
+      defer
+      data-website-id="09a5781d-26de-4f88-9d84-d6821ad0730d"
+      src="https://sonnet-events.herokuapp.com/umami.js"></script>
     <meta
       name="description"
       content={props.description + " Click to learn more."}
