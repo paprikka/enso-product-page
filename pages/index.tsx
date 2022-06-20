@@ -35,7 +35,8 @@ const SocialMeta: FC<SocialMetaProps> = (props: SocialMetaProps) => (
       async
       defer
       data-website-id="09a5781d-26de-4f88-9d84-d6821ad0730d"
-      src="https://sonnet-events.herokuapp.com/umami.js"></script>
+      src="https://sonnet-events.herokuapp.com/umami.js"
+    ></script>
     <meta
       name="description"
       content={props.description + " Click to learn more."}
@@ -69,7 +70,7 @@ export default function Home() {
             <h2>It’s writing-focused.</h2>
             <p>
               The text <Fade text="fades away" /> as you type so you can focus
-              on what you want to say istead of how you want to say it.
+              on what you want to say instead of how you want to say it.
             </p>
             <p>
               You can’t select or edit text, but you can download and review it
