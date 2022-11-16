@@ -35,7 +35,7 @@ const SocialMeta: FC<SocialMetaProps> = (props: SocialMetaProps) => (
       async
       defer
       data-website-id="09a5781d-26de-4f88-9d84-d6821ad0730d"
-      src="https://sonnet-events.herokuapp.com/umami.js"
+      src="https://sonnet-events.vercel.app/umami.js"
     ></script>
     <meta
       name="description"
