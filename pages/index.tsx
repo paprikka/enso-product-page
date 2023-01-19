@@ -14,7 +14,7 @@ type SocialMetaProps = {
   image: string;
 };
 
-const SocialMeta: FC<SocialMetaProps> = (props: SocialMetaProps) => (
+const renderSocialMeta = (props: SocialMetaProps) => (
   <>
     <meta property="og:description" content={props.description} />
     <meta property="og:title" content={props.title} />
@@ -30,7 +30,7 @@ const SocialMeta: FC<SocialMetaProps> = (props: SocialMetaProps) => (
     <meta name="twitter:title" content={props.title} />
     <meta name="twitter:description" content={props.description} />
     <meta name="twitter:image" content={props.image} />
-    <title> {props.title} </title>
+    <title>{props.title}</title>
     <script
       async
       defer
@@ -48,18 +48,19 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Ensō—write now, edit later.</title>
         <link rel="icon" href="/favicon.jpg" />
         <link
           href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap"
           rel="stylesheet"
         />
-        <SocialMeta
-          description="Ensō is a writing tool that helps you enter a state of flow."
-          title="Ensō—write now, edit later."
-          image="https://enso.sonnet.io/social-icon.png"
-          url="https://enso.sonnet.io"
-        />
+
+        {renderSocialMeta({
+          description:
+            "Ensō is a writing tool that helps you enter a state of flow.",
+          title: "Ensō—write now, edit later.",
+          image: "https://enso.sonnet.io/social-icon.png",
+          url: "https://enso.sonnet.io",
+        })}
       </Head>
 
       <main className={styles.main}>
