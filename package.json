@@ -19,7 +19,9 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@react-spring/web": "^9.6.1",
     "@types/classnames": "^2.3.1",
-    "classnames": "^2.3.2"
+    "classnames": "^2.3.2",
+    "framer-motion": "^8.5.0"
   }
 }
