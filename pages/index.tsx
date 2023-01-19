@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { FC } from "react";
+import { Download } from "../components/download";
 import { Fade } from "../components/fade";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
@@ -92,6 +93,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Download />
     </div>
   );
 }

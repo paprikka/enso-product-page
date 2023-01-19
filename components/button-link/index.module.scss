@@ -17,10 +17,32 @@
   &:hover {
     opacity: 0.9;
   }
+
+}
+
+.buttonLinkPrimaryOutline {
+  @extend .buttonLinkPrimary;
+  border-radius: 100rem;
 }
 
 .buttonLinkSecondary {
   &:hover {
     text-decoration: underline;
   }
+
+  &Outline {
+    border: 2px solid;
+    border-radius: 100rem;
+  }
+}
+.buttonLinkSecondaryOutline {
+  @extend .buttonLinkSecondary;
+  
+  border: 2px solid;
+  border-radius: 100rem;
+}
+
+
+.noMargin {
+  margin: 0;
 }
