@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { Download } from "../components/download";
 import { Fade } from "../components/fade";
 import { Footer } from "../components/footer";
@@ -46,6 +46,8 @@ const renderSocialMeta = (props: SocialMetaProps) => (
 );
 
 export default function Home() {
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -93,7 +95,12 @@ export default function Home() {
       </main>
 
       <Footer />
-      <Download />
+      <Download
+        isVisible={isModalVisible}
+        onClose={() => {
+          setIsModalVisible(false);
+        }}
+      />
     </div>
   );
 }

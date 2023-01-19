@@ -1,0 +1,44 @@
+.container {
+  font-size: 1rem;
+  line-height: calc(var(--baseline) * 1em);
+}
+
+.container strong {
+  font-weight: 600;
+}
+
+.dimmed {
+  opacity: 0.3;
+}
+
+.inline {
+  display: inline;
+  margin: 0;
+}
+
+.size-s {
+  font-size: 0.75rem;
+}
+
+.size-xs {
+  font-size: 0.5rem;
+}
+
+.align-start {
+  text-align: start;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.container a {
+  color: var(--color-text);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: 0.3s opacity;
+}
+
+.container a:hover {
+  opacity: .7;
+}

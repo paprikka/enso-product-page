@@ -1,0 +1,14 @@
+.container {
+    --h: .5rem;
+    --units: 1;
+
+    height: calc(var(--h) * var(--units));
+}
+
+.size{
+    @for $i from 1 through 10 {
+        &-#{$i} {
+            --units: #{$i};
+        }
+      }
+}
