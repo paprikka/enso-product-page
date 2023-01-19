@@ -1,22 +1,18 @@
 import React, { FC } from "react";
-import styles from "./index.module.scss";
+import { getClasses, SharedButtonProps } from "../button";
 
-type ButtonLinkProps = {
-  level?: "primary" | "secondary";
-  label: string;
+type ButtonLinkProps = SharedButtonProps & {
   href: string;
 };
 export const ButtonLink: FC<ButtonLinkProps> = ({
   label,
   level,
   href,
-}: ButtonLinkProps) => (
+  noMargin,
+  size = "m",
+}) => (
   <a
-    className={
-      level === "primary"
-        ? `${styles.buttonLink} ${styles.buttonLinkPrimary}`
-        : `${styles.buttonLink} ${styles.buttonLinkSecondary}`
-    }
+    className={getClasses({ level, noMargin, size })}
     target="_blank"
     href={href}
   >
