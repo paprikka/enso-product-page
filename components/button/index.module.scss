@@ -1,10 +1,14 @@
-.buttonLink {
+.button {
+  appearance: none;
+  border: none;
+  margin: 0;
   padding: calc(var(--baseline) * 0.5 * var(--p)) var(--p);
   font-weight: 600;
   font-size: var(--fz);
   font-family: var(--font-ui);
   justify-content: space-between;
-  
+  cursor: pointer;
+
   @media all and (min-width: 415px) {
     margin-right: var(--mr);
   }
@@ -17,35 +21,35 @@
 }
 
 .s {
-  --fz: .75rem;
-  --mr: .75rem;
-  --p: .75rem;
+  --fz: 0.75rem;
+  --mr: 0.75rem;
+  --p: 0.75rem;
 }
 
-.buttonLinkPrimary {
+.buttonPrimary {
   background-color: var(--color-primary);
   color: var(--color-page);
   transition: 0.2s opacity;
+  border-radius: 100rem;
 
   &:hover {
     opacity: 0.9;
   }
-
 }
 
-.buttonLinkPrimaryOutline {
-  @extend .buttonLinkPrimary;
+.buttonPrimaryOutline {
+  @extend .buttonPrimary;
   border-radius: 100rem;
 }
 
-.buttonLinkSecondary {
+.buttonSecondary {
   &:hover {
     text-decoration: underline;
   }
 }
-.buttonLinkSecondaryOutline {
-  @extend .buttonLinkSecondary;
-  
+.buttonSecondaryOutline {
+  @extend .buttonSecondary;
+
   &:hover {
     text-decoration: unset;
   }
@@ -54,8 +58,6 @@
   border-radius: 100rem;
 }
 
-
 .noMargin {
   margin: 0;
 }
-

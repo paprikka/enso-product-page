@@ -47,8 +47,6 @@ const renderSocialMeta = (props: SocialMetaProps) => (
 );
 
 export default function Home() {
-  const [isModalVisible, setIsModalVisible] = useState(true);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -96,12 +94,6 @@ export default function Home() {
       </main>
 
       <Footer />
-      <Download
-        isVisible={isModalVisible}
-        onClose={() => {
-          setIsModalVisible(false);
-        }}
-      />
     </div>
   );
 }

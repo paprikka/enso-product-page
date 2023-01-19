@@ -1,13 +1,8 @@
 import React, { FC } from "react";
-import styles from "./index.module.scss";
-import c from "classnames";
+import { getClasses, SharedButtonProps } from "../button";
 
-type ButtonLinkProps = {
-  level?: "primary" | "secondary" | "secondaryOutline" | "primaryOutline";
-  label: string;
+type ButtonLinkProps = SharedButtonProps & {
   href: string;
-  noMargin?: boolean;
-  size?: "m" | "s";
 };
 export const ButtonLink: FC<ButtonLinkProps> = ({
   label,
@@ -15,17 +10,9 @@ export const ButtonLink: FC<ButtonLinkProps> = ({
   href,
   noMargin,
   size = "m",
-}: ButtonLinkProps) => (
+}) => (
   <a
-    className={c({
-      [styles.buttonLink]: true,
-      [styles.buttonLinkPrimary]: level === "primary",
-      [styles.buttonLinkSecondary]: level === "secondary",
-      [styles.buttonLinkSecondaryOutline]: level === "secondaryOutline",
-      [styles.buttonLinkPrimaryOutline]: level === "primaryOutline",
-      [styles.noMargin]: !!noMargin,
-      [styles[size]]: true,
-    })}
+    className={getClasses({ level, noMargin, size })}
     target="_blank"
     href={href}
   >
