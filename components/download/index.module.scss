@@ -9,17 +9,20 @@
     backdrop-filter: blur(10px);
 
     --u: .5rem;
+    --animation-scale-in: .5;
+    --animation-scale-out: 1;
 
-    transition: .6s opacity, 0s visibility;
+    transition: calc(.6s * var(--animation-scale-in)) opacity, 0s visibility;
     transition-timing-function: ease-out;
     visibility: visible;
-
 
     &.isHidden {
         opacity: 0;
         visibility: hidden;
-        transition: .4s opacity, .4s visibility;
-        transition-delay: .3s;
+        transition: 
+            calc(.4s * var(--animation-scale-out)) opacity,
+            calc(.4s * var(--animation-scale-out)) visibility;
+        transition-delay: calc(.3s * var(--animation-scale-out));
     }
 }
 
@@ -42,7 +45,7 @@
     0 .2rem .3rem rgba(0, 0, 0, .05);
 
 
-    transition: .5s transform;
+    transition: calc(.5s * var(--animation-scale-in)) transform;
     transform: none;
     
     .isHidden & {
@@ -50,7 +53,7 @@
     }
 
     & > * {
-        transition: 1s opacity;
+        transition: calc(1s * var(--animation-scale-in)) opacity;
         transition-timing-function: ease-in;
         opacity: 1;
 
@@ -62,7 +65,7 @@
 
     @for $i from 1 through 10 {
         & > :nth-child(#{$i}) {
-          transition-delay: #{$i * .11}s;
+          transition-delay: calc( #{$i * .11}s * var(--animation-scale-in));
         }
       }
 }
