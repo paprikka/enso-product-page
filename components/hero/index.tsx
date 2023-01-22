@@ -3,10 +3,21 @@ import { Button } from "../button";
 import { ButtonLink } from "../button-link";
 import { Download } from "../download";
 import { HGroup } from "../h-group";
+import { Tracking } from "../tracking";
 import styles from "./index.module.scss";
 
 export const Hero = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
+
+  const handleShowModalClick = () => {
+    setIsModalVisible(true);
+    Tracking.track("Download Modal: show");
+  };
+
+  const handleHideModalClick = () => {
+    setIsModalVisible(false);
+    Tracking.track("Download Modal: hide");
+  };
 
   return (
     <>
@@ -26,7 +37,7 @@ export const Hero = () => {
           <HGroup>
             <Button
               level="primary"
-              onClick={() => setIsModalVisible(true)}
+              onClick={handleShowModalClick}
               label="Try it for yourself"
             />
             <ButtonLink
@@ -37,12 +48,7 @@ export const Hero = () => {
           </HGroup>
         </section>
       </section>
-      <Download
-        isVisible={isModalVisible}
-        onClose={() => {
-          setIsModalVisible(false);
-        }}
-      />
+      <Download isVisible={isModalVisible} onClose={handleHideModalClick} />
     </>
   );
 };

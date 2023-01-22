@@ -6,6 +6,7 @@ import { Text } from "../text";
 import { Spacer } from "../spacer";
 import { FC, MouseEventHandler, useState } from "react";
 import classNames from "classnames";
+import { Tracking } from "../tracking";
 
 export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
   onClose,
@@ -42,6 +43,7 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
             level="primaryOutline"
             noMargin
             size="s"
+            onClick={() => Tracking.track("Download Modal: Buy now click")}
           />
           <Text dimmed size="s" align="center">
             - or -
@@ -52,6 +54,7 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
             level="secondaryOutline"
             noMargin
             size="s"
+            onClick={() => Tracking.track("Download Modal: Web click")}
           />
         </div>
         <Spacer size={1} />
