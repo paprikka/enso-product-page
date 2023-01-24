@@ -12,17 +12,19 @@
     --animation-scale-in: .5;
     --animation-scale-out: 1;
 
-    transition: calc(.6s * var(--animation-scale-in)) opacity, 0s visibility;
-    transition-timing-function: ease-out;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        calc(.4s * var(--animation-scale-out)) opacity,
+        calc(.4s * var(--animation-scale-out)) visibility;
+    
+    transition-delay: calc(.3s * var(--animation-scale-out));
 
-    &.isHidden {
-        opacity: 0;
-        visibility: hidden;
-        transition: 
-            calc(.4s * var(--animation-scale-out)) opacity,
-            calc(.4s * var(--animation-scale-out)) visibility;
-        transition-delay: calc(.3s * var(--animation-scale-out));
+    &.isVisible {
+        transition: calc(.6s * var(--animation-scale-in)) opacity, 0s visibility;
+        transition-timing-function: ease-out;
+        visibility: visible;
+        opacity: 1;
     }
 }
 
@@ -32,9 +34,9 @@
     max-width: 21rem;
     display: flex;
     flex-direction: column;
-    align-content: center;
-    align-items: center;
-    text-align: center;
+    align-content:  center;
+    align-items:    center;
+    text-align:     center;
 
     padding: 2rem;
     background-color: var(--color-page);
@@ -45,29 +47,18 @@
     0 .2rem .3rem rgba(0, 0, 0, .05);
 
 
-    transition: calc(.5s * var(--animation-scale-in)) transform;
-    transform: none;
+    transform: scale(.98);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity, transform, visibility;
+    transition-duration: .4s;
     
-    .isHidden & {
-        transform: scale(.98);
-    }
-
-    & > * {
-        transition: calc(1s * var(--animation-scale-in)) opacity;
-        transition-timing-function: ease-in;
+    .isVisible & {
+        transform: none;
         opacity: 1;
-
-        .isHidden & {
-            opacity: 0;
-            transition-duration: 0;
-        }
+        visibility: visible;
     }
-
-    @for $i from 1 through 10 {
-        & > :nth-child(#{$i}) {
-          transition-delay: calc( #{$i * .11}s * var(--animation-scale-in));
-        }
-      }
+    
 }
 
 
@@ -153,9 +144,9 @@
 
 
 
-// @media (prefers-reduced-motion) {
+@media (prefers-reduced-motion) {
     .content, .content *, .overlay {
         transition: none !important;
         transition-delay: none !important;
     }
-// }
+}

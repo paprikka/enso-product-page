@@ -21,7 +21,7 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
       data-overlay="true"
       className={classNames({
         [styles.overlay]: true,
-        [styles.isHidden]: !isVisible,
+        [styles.isVisible]: isVisible,
       })}
       onClick={handleOverlayClick}
     >
