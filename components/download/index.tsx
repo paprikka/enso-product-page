@@ -38,7 +38,7 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
         <h2 className={styles.title}>Ensō for Mac</h2>
         <div className={styles.buttons}>
           <ButtonLink
-            href="https://sonnet.gumroad.com/l/ewckz"
+            href="https://sonnet.gumroad.com/l/enso"
             label="Buy now"
             level="primaryOutline"
             noMargin
