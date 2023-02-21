@@ -50,7 +50,7 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
           </Text>
           <ButtonLink
             href="https://write.sonnet.io"
-            label="Try the web version"
+            label="Get the web version"
             level="secondaryOutline"
             noMargin
             size="s"
@@ -58,8 +58,8 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
           />
         </div>
         <Spacer size={1} />
-        <Text dimmed size="s" inline>
-          free and{" "}
+        <Text size="s" inline>
+          <strong>Not a trial</strong>, free and{" "}
           <Link href="https://github.com/paprikka/ulysses">always private</Link>
         </Text>
         <Spacer size={6} />
