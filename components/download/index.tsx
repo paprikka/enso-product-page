@@ -63,8 +63,9 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
           <Link href="https://github.com/paprikka/ulysses">always private</Link>
         </Text>
         <Spacer size={6} />
-        <Text size="s" inline>
-          Looking for Windows or Linux support?{" "}
+        <Text align="center" size="s" inline>
+          <span className={styles.pill}>New</span> Try the Windows version <Link href="https://sonnet.gumroad.com/l/dbiyvs" target="_blank">here</Link>.
+          <br/>Looking for Linux support?{" "}
           <Link href="https://sonnet.io/posts/hi">Get in touch</Link>.
         </Text>
         <button className={styles.closeButton} onClick={handleCloseClick} />
