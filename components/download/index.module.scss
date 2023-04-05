@@ -143,6 +143,21 @@
 }
 
 
+.pill {
+    display: inline-block;
+    text-transform: lowercase;
+    font-family: var(--font-header);
+    background-color: var(--color-primary);
+    color: var(--color-page);
+    padding: 0 .5em .1em;
+    position: relative;
+    top: -.1em;
+    border-radius: 100rem;
+    font-size: .8em ;
+
+    animation: 1s .2s pulse linear 3 both;
+}
+
 
 @media (prefers-reduced-motion) {
     .content, .content *, .overlay {
@@ -150,3 +165,16 @@
         transition-delay: none !important;
     }
 }
+@keyframes pulse {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  }

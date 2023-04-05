@@ -64,7 +64,13 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
         </Text>
         <Spacer size={6} />
         <Text align="center" size="s" inline>
-          <span className={styles.pill}>New</span> Try the Windows version <Link href="https://sonnet.gumroad.com/l/dbiyvs" target="_blank">here</Link>.
+          <span className={styles.pill}>New</span>{' '}
+          Try the Windows version{' '}
+          <Link
+            href="https://sonnet.gumroad.com/l/dbiyvs"
+            target="_blank"
+            onClick={() => Tracking.track("Download Modal: Windows click")}
+            >here</Link>.
           <br/>Looking for Linux support?{" "}
           <Link href="https://sonnet.io/posts/hi">Get in touch</Link>.
         </Text>
