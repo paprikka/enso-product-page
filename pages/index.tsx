@@ -87,7 +87,7 @@ export default function Home() {
             <h2>It's private.</h2>
             <p>
               All of your changes are saved locally. Ensō works perfectly fine
-              even without internet connecton.
+              even without internet connection.
             </p>
           </section>
         </ValueProp>
