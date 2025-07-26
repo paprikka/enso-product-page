@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-page);
+  font-family: var(--font-ui);
+  padding: calc(var(--baseline) * 0.25rem) var(--page-margin);
+  text-align: center;
+  font-size: .75rem;
+}
+
+.content {
+  max-width: var(--page-width);
+  margin: 0 auto;
+
+
+  >p {
+    margin-block: .5em;
+  }
+}
+
+.text {
+  font-weight: 500;
+}
+
+.link {
+  color: var(--color-page);
+  text-decoration: underline;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

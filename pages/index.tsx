@@ -4,6 +4,7 @@ import { Download } from "../components/download";
 import { Fade } from "../components/fade";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
+import { NewVersionBanner } from "../components/new-version-banner";
 import { Preview } from "../components/preview";
 import { ValueProp } from "../components/value-proposition";
 import styles from "../styles/Home.module.css";
@@ -65,6 +66,7 @@ export default function Home() {
         })}
       </Head>
 
+      <NewVersionBanner />
       <main className={styles.main}>
         <Hero />
         <Preview />
