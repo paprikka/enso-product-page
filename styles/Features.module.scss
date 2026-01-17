@@ -1,9 +1,31 @@
 .features {
+  nav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    font-family: var(--font-ui);
+    font-weight: 600;
+
+    a:hover {
+      color: var(--color-primary);
+    }
+  }
+
   .callout {
     padding: 1rem;
+    margin-left: -1rem;
+    margin-right: -1rem;
     background: rgba(0, 0, 0, 0.03);
     border-radius: 4px;
     margin-bottom: 2rem;
+    font-size: 1.25em;
+    font-style: italic;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
+
+    @media (max-width: 414px) {
+      border-radius: 0;
+    }
 
     p {
       margin: 0;
@@ -86,7 +108,45 @@
     margin-bottom: 2rem;
   }
 
+  h1 {
+    margin-bottom: 0;
+  }
+
   h2 {
     margin-bottom: 1rem;
   }
+
+  code,
+  samp {
+    font-family: monospace;
+    font-size: 0.8em;
+  }
+
+  .heroImage {
+    display: block;
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+    margin: 0 auto;
+    mix-blend-mode: multiply;
+
+    @media (max-width: 414px) {
+      max-width: none;
+      width: calc(100% + 2 * var(--page-margin));
+      margin-left: calc(-1 * var(--page-margin));
+      margin-right: calc(-1 * var(--page-margin));
+    }
+  }
+}
+
+.features::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 20vw;
+  aspect-ratio: 1;
+  background: url("../pages/2/dogs.webp") bottom right / contain no-repeat;
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }
