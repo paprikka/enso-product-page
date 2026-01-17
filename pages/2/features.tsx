@@ -12,10 +12,6 @@ export default function Features() {
         <title>Ensō — Quick Reference</title>
         <meta name="description" content="Ensō 2 features overview" />
         <link rel="icon" href="/favicon.jpg" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap"
-          rel="stylesheet"
-        />
       </Head>
 
       <main

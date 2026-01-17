@@ -52,11 +52,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.jpg" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-
         {renderSocialMeta({
           description:
             "Ensō is a writing tool that helps you enter a state of flow.",
