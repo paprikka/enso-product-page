@@ -63,8 +63,16 @@
 
   th,
   td {
-    padding: 0.1em 0;
+    padding: 0.1em 0.5em 0.1em 0;
     vertical-align: top;
+
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
+  kbd {
+    white-space: nowrap;
   }
 
   kbd > kbd {
