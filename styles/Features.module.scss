@@ -1,4 +1,18 @@
 .features {
+  max-width: 30rem;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b,
+  dt {
+    font-weight: 600;
+  }
+
   nav {
     position: fixed;
     top: 1rem;
@@ -33,6 +47,8 @@
 
     a {
       text-decoration: underline;
+      text-underline-offset: 0.1em;
+      font-weight: 600;
     }
   }
 
@@ -91,7 +107,6 @@
   }
 
   dt {
-    font-weight: 600;
     margin-top: 1rem;
 
     &:first-child {
@@ -102,6 +117,15 @@
   dd {
     margin-left: 0;
     margin-top: 0.25rem;
+  }
+
+  ul {
+    list-style: disc outside;
+    padding-left: 0;
+  }
+
+  li {
+    text-wrap: pretty;
   }
 
   section {
@@ -116,10 +140,17 @@
     margin-bottom: 1rem;
   }
 
-  code,
-  samp {
+  code {
     font-family: monospace;
     font-size: 0.8em;
+  }
+
+  samp {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 0.56em;
+    letter-spacing: 0.25em;
+    vertical-align: middle;
   }
 
   .heroImage {

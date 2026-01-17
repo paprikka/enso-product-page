@@ -25,27 +25,19 @@ export default function Features() {
         <nav>
           <Link href="/">← Back</Link>
         </nav>
-        <h1 style={{ fontFamily: "var(--font-header)", fontSize: "2.5rem" }}>
-          Quick Reference
-        </h1>
+        <h1 style={{ fontFamily: "var(--font-header)" }}>Reference</h1>
 
-        <Image
-          src={ballsImage}
-          alt=""
-          className={featureStyles.heroImage}
-        />
+        <Image src={ballsImage} alt="" className={featureStyles.heroImage} />
 
         <aside className={featureStyles.callout}>
           <p>
             Have a question, found a bug, or just want to say hi?
             <br />
-            <strong>
-              <a href="mailto:hello@sonnet.io?subject=Question%20about%20Ens%C5%8D">
-                Email me
-              </a>{" "}
-              or{" "}
-              <a href="https://calendly.com/hey_hey/enso">book a quick call</a>.
-            </strong>
+            <a href="mailto:hello@sonnet.io?subject=Question%20about%20Ens%C5%8D">
+              Email me
+            </a>{" "}
+            or <a href="https://calendly.com/hey_hey/enso">book a quick call</a>
+            .
           </p>
         </aside>
 
@@ -96,7 +88,9 @@ export default function Features() {
                     <kbd>C</kbd>
                   </kbd>
                 </td>
-                <td>Toggle Coffee Shop Mode (privacy)</td>
+                <td>
+                  Toggle <em>Coffee Shop Mode</em> (abc → <samp>●●●</samp>)
+                </td>
               </tr>
               <tr>
                 <td>
@@ -152,7 +146,7 @@ export default function Features() {
                     <kbd>Q</kbd>
                   </kbd>
                 </td>
-                <td>Quit application</td>
+                <td>Quit</td>
               </tr>
             </tbody>
           </table>
@@ -166,7 +160,8 @@ export default function Features() {
 
             <dt>Coffee Shop Mode</dt>
             <dd>
-              Privacy mode that replaces text with bullets (<samp>●</samp>)
+              Quickly toggle between visible and hidden text. Excellent for{" "}
+              <samp>●●●●●●●</samp> in crowded spaces.
             </dd>
 
             <dt>Auto-hide UI</dt>
@@ -179,17 +174,17 @@ export default function Features() {
           <dl>
             <dt>Spellcheck</dt>
             <dd>
-              Toggle on/off (default: <samp>OFF</samp>)
+              Toggle on/off (default: <em>off</em>)
             </dd>
 
             <dt>Autocorrect</dt>
             <dd>
-              Toggle on/off (default: <samp>ON</samp>)
+              Toggle on/off (default: <em>on</em>)
             </dd>
 
             <dt>Autocapitalize</dt>
             <dd>
-              Toggle on/off (default: <samp>OFF</samp>)
+              Toggle on/off (default: <em>off</em>)
             </dd>
 
             <dt>Text scaling</dt>
@@ -217,7 +212,10 @@ export default function Features() {
             </dd>
           </dl>
           <ul>
-            <li>Auto-switches based on system appearance</li>
+            <li>
+              Auto-switches when changing OS appearance, remembering your last
+              selected theme for each mode
+            </li>
             <li>Live preview in theme picker</li>
           </ul>
         </section>
@@ -227,7 +225,7 @@ export default function Features() {
           <dl>
             <dt>Save</dt>
             <dd>
-              Exports as <code>note-DD-MM-SS.md</code>
+              Exports as <em>note-DD-MM-SS.md</em>
             </dd>
 
             <dt>Copy</dt>
@@ -241,21 +239,17 @@ export default function Features() {
         <section>
           <h2>Other Features</h2>
           <ul>
-            <li>
+            {/* <li>
               <abbr title="Right-to-Left">RTL</abbr>/
               <abbr title="Bidirectional">BIDI</abbr> text direction support
-            </li>
+            </li> */}
+            <li>Settings are persisted locally</li>
             <li>
-              Persistent settings via <code>localStorage</code>
+              Settings reset option (<em>Ensō &gt; Clear All Settings</em>)
             </li>
-            <li>
-              Settings reset option (<samp>Ensō &gt; Clear All Settings</samp>)
-            </li>
-            <li>Help menu with features overview and contact links</li>
           </ul>
         </section>
       </main>
     </div>
   );
 }
-
