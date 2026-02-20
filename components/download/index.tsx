@@ -38,11 +38,12 @@ export const Download: FC<{ isVisible: boolean; onClose: () => void }> = ({
         <h2 className={styles.title}>Ensō for Mac</h2>
         <div className={styles.buttons}>
           <ButtonLink
-            href="https://sonnet.gumroad.com/l/enso"
+            href={process.env.NEXT_PUBLIC_STRIPE_PAYMENT_LINK!}
             label="Buy now"
             level="primaryOutline"
             noMargin
             size="s"
+            target="_self"
             onClick={() => Tracking.track("Download Modal: Buy now click")}
           />
           <Text dimmed size="s" align="center">
