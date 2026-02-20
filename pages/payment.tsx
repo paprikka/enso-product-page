@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from "next";
-import Head from "next/head";
 import Stripe from "stripe";
-import styles from "../styles/Payment.module.scss";
+import { encryptToken } from "../lib/download-token";
+import ErrorPage from "../components/error-page/ErrorPage";
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const sessionId = query.session_id as string;
@@ -16,9 +16,10 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     if (session.payment_status !== "paid") return { props: { error: true } };
 
     const email = session.customer_details?.email ?? "";
+    const ref = encryptToken({ email, sessionId });
     return {
       redirect: {
-        destination: `/thank-you?email=${encodeURIComponent(email)}`,
+        destination: `/thank-you?email=${encodeURIComponent(email)}&ref=${ref}`,
         permanent: false,
       },
     };
@@ -28,16 +29,5 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 };
 
 export default function Payment() {
-  return (
-    <>
-      <Head>
-        <title>Ensō</title>
-        <link rel="icon" href="/favicon.jpg" />
-      </Head>
-      <div className={styles.container}>
-        <p>Something went wrong. Your payment may not have completed.</p>
-        <a href="/">Back to home</a>
-      </div>
-    </>
-  );
+  return <ErrorPage />;
 }

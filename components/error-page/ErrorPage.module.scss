@@ -7,7 +7,7 @@
   padding: var(--page-margin);
   font-family: var(--font-body);
   text-align: center;
-  max-width: var(--page-width);
+  max-width: 30rem;
   margin: 0 auto;
   gap: calc(var(--baseline) * 1rem);
 }
@@ -21,36 +21,18 @@
   font-family: var(--font-header);
   font-size: 2rem;
   margin: 0;
+  text-wrap: balance;
 }
 
-.receipt {
+.message {
   margin: 0;
   font-size: 1.1em;
-}
-
-.email {
-  color: var(--color-primary);
-  font-weight: 600;
+  text-wrap: pretty;
 }
 
 .emailLink {
   color: var(--color-primary);
   text-underline-offset: 0.15em;
-}
-
-.download {
-  font-family: var(--font-ui);
-  font-size: 1rem;
-  font-weight: 600;
-  color: #fff;
-  background: var(--color-primary);
-  text-decoration: none;
-  padding: 0.65em 1.4em;
-  border-radius: 0.4em;
-
-  &:hover {
-    opacity: 0.88;
-  }
 }
 
 .back {
