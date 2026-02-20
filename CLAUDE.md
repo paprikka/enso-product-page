@@ -35,3 +35,15 @@ Uses CSS custom properties for theming:
 ### Analytics Integration
 
 The site includes Umami analytics with event tracking for user interactions, particularly download button clicks. Local development shows mock tracking events in console.
+
+## How to Work
+
+### Feedback Loops
+
+Prefer automatic feedback loops over manual verification:
+
+- **Browser testing**: Use the `dev-browser` skill to visually verify UI changes against the running dev server (`pnpm dev`)
+- **Build validation**: Run `pnpm build` to catch type errors and build failures after significant changes
+- **Functional tests**: Write or run Playwright tests (see `playwright` config) for interaction flows
+
+When making UI changes, open the dev server and use the browser tool to confirm the result looks correct before finishing.
