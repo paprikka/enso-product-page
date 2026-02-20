@@ -3,7 +3,13 @@
     "allow": [
       "Bash(mkdir:*)",
       "mcp__context7__query-docs",
-      "WebFetch(domain:docs.stripe.com)"
+      "WebFetch(domain:docs.stripe.com)",
+      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page log --oneline -20)",
+      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page show 64b1555 --stat)",
+      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page show 64b1555)",
+      "Bash(pnpm exec playwright:*)",
+      "WebFetch(domain:docs.bunny.net)",
+      "WebFetch(domain:support.bunny.net)"
     ],
     "deny": []
   }
