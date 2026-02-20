@@ -1,0 +1,15 @@
+.button {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: var(--color-page);
+  font-family: var(--font-ui);
+  font-weight: unset;
+  border-radius: 0.6em;
+  border: none;
+  box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: calc(var(--font-size) * 1.5);
+  // text-box-trim: trim-both;
+  // text-box-edge: cap alphabetic;
+  padding: 0.4em 0.8em;
+}
