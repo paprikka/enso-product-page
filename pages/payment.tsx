@@ -1,6 +1,7 @@
 import type { GetServerSideProps } from "next";
 import Stripe from "stripe";
 import { encryptToken } from "../lib/download-token";
+import { sendReceiptEmail } from "../lib/send-receipt-email";
 import ErrorPage from "../components/error-page/ErrorPage";
 
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
@@ -17,9 +18,17 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
     const email = session.customer_details?.email ?? "";
     const ref = encryptToken({ email, sessionId });
+    const thankYouUrl = `/thank-you?email=${encodeURIComponent(email)}&ref=${ref}`;
+
+    try {
+      await sendReceiptEmail(email, thankYouUrl, sessionId);
+    } catch {
+      // never block the redirect
+    }
+
     return {
       redirect: {
-        destination: `/thank-you?email=${encodeURIComponent(email)}&ref=${ref}`,
+        destination: thankYouUrl,
         permanent: false,
       },
     };

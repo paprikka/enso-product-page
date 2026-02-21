@@ -12,7 +12,9 @@
       "WebFetch(domain:support.bunny.net)",
       "Bash(/Users/raf/.claude/skills/commit_message/commit_message.sh)",
       "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page log --oneline -10)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page commit -m \"feat: add signed download flow with token auth and error page\")"
+      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page commit -m \"feat: add signed download flow with token auth and error page\")",
+      "Bash(pbcopy:*)",
+      "WebFetch(domain:resend.com)"
     ],
     "deny": []
   }
