@@ -47,6 +47,7 @@ const renderSocialMeta = (props: SocialMetaProps) => (
 export default function Home() {
   return (
     <div className={styles.container}>
+
       <Head>
         <link rel="icon" href="/favicon.jpg" />
         {renderSocialMeta({
