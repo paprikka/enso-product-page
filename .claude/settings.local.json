@@ -14,7 +14,16 @@
       "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page log --oneline -10)",
       "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page commit -m \"feat: add signed download flow with token auth and error page\")",
       "Bash(pbcopy:*)",
-      "WebFetch(domain:resend.com)"
+      "WebFetch(domain:resend.com)",
+      "Bash(vercel project:*)",
+      "Bash(vercel domains:*)",
+      "Bash(vercel env:*)",
+      "mcp__stripe__get_stripe_account_info",
+      "mcp__stripe__list_products",
+      "mcp__stripe__list_prices",
+      "mcp__stripe__retrieve_balance",
+      "Bash(which vercel:*)",
+      "Bash(vercel ls:*)"
     ],
     "deny": []
   }
