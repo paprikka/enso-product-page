@@ -22,8 +22,8 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
     try {
       await sendReceiptEmail(email, thankYouUrl, sessionId);
-    } catch {
-      // never block the redirect
+    } catch (err) {
+      console.error(JSON.stringify({ event: "receipt_email_error", email, error: String(err), ts: new Date().toISOString() }));
     }
 
     return {
@@ -32,7 +32,8 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
         permanent: false,
       },
     };
-  } catch {
+  } catch (err) {
+    console.error(JSON.stringify({ event: "payment_error", error: String(err), ts: new Date().toISOString() }));
     return { props: { error: true } };
   }
 };
