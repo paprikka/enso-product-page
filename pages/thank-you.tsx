@@ -49,10 +49,11 @@ export default function ThankYou(props: Props) {
       </Head>
       <div className={styles.container}>
         <Image
-          src="/app-icon.png"
+          src="/enso-sigma-icon.png"
           alt="Ensō"
-          width={96}
-          height={96}
+          width={150}
+          height={150}
+          quality={100}
           className={styles.icon}
         />
         <h1 className={styles.heading}>Thank you!</h1>
