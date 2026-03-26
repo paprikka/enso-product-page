@@ -1,6 +1,6 @@
 .button {
   display: inline-block;
-  background-color: var(--color-text);
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.12), transparent 70%) var(--color-text);
   color: var(--color-page);
   font-family: var(--font-ui);
   font-weight: unset;
@@ -12,7 +12,7 @@
 
   @media (hover: hover) {
     &:hover {
-      background-color: var(--color-primary);
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15), transparent 70%) var(--color-primary);
     }
   }
 }

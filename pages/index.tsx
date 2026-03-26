@@ -4,6 +4,7 @@ import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
 import { Preview } from "../components/preview";
 import { ValueProp } from "../components/value-proposition";
+import { PaperOverlay } from "../components/paper-overlay";
 import styles from "../styles/Home.module.css";
 
 type SocialMetaProps = {
@@ -59,6 +60,7 @@ export default function Home() {
         })}
       </Head>
 
+      <PaperOverlay />
       <main className={styles.main}>
         <Hero />
         <Preview />
