@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import crypto from 'node:crypto'
 import { readFileSync, existsSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
