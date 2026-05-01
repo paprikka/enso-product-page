@@ -4,19 +4,13 @@ import styles from "./index.module.scss";
 type Props = {
   title: string;
   subtitle: ReactNode;
-  imageSrc: string;
-  imageAlt: string;
+  children: ReactNode;
 };
 
-export const FeatureSection = ({
-  title,
-  subtitle,
-  imageSrc,
-  imageAlt,
-}: Props) => (
+export const FeatureSection = ({ title, subtitle, children }: Props) => (
   <section className={styles.section}>
     <h2 className={styles.title}>{title}</h2>
     <p className={styles.subtitle}>{subtitle}</p>
-    <img className={styles.image} src={imageSrc} alt={imageAlt} />
+    {children}
   </section>
 );

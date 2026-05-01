@@ -3,6 +3,7 @@ import { Fade } from "../components/fade";
 import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
+import { MockBrowser } from "../components/mock-browser";
 import { Preview } from "../components/preview";
 import { ValueProp } from "../components/value-proposition";
 import { PaperOverlay } from "../components/paper-overlay";
@@ -69,31 +70,48 @@ export default function Home() {
             <>
               Ensō is a writing tool that helps you enter a state of flow.
               <br />
-              It does this by separating writing from editing and thus making it
-              harder for you to edit yourself.
+              How? It forces you to <em>write</em> and <em>think</em> before
+              editing. That makes it harder for you to <em>overthink</em> or{" "}
+              <em>edit yourself</em>.
             </>
           }
-          imageSrc="/light-1.png"
-          imageAlt="Writing-first preview"
-        />
+        >
+          <MockBrowser
+            imageSrc="/light-1.png"
+            imageAlt="Writing-first preview"
+            title="Ensō"
+          />
+        </FeatureSection>
         <FeatureSection
           title="Coffeeshop Mode™"
           subtitle="Ambient background sounds blend with your typing to recreate the focused buzz of a busy café, wherever you are."
-          imageSrc="https://placehold.co/1200x600?text=Coffeeshop+Mode"
-          imageAlt="Coffeeshop Mode preview"
-        />
+        >
+          <img
+            src="https://placehold.co/1200x600?text=Coffeeshop+Mode"
+            alt="Coffeeshop Mode preview"
+            style={{ display: "block", width: "100%", height: "auto" }}
+          />
+        </FeatureSection>
         <FeatureSection
           title="6 Accessible Themes"
           subtitle="Six carefully tuned colour schemes — including high-contrast and low-light options — meet WCAG contrast standards out of the box."
-          imageSrc="https://placehold.co/1200x600?text=Accessible+Themes"
-          imageAlt="Accessible themes preview"
-        />
+        >
+          <img
+            src="https://placehold.co/1200x600?text=Accessible+Themes"
+            alt="Accessible themes preview"
+            style={{ display: "block", width: "100%", height: "auto" }}
+          />
+        </FeatureSection>
         <FeatureSection
           title="RTL language support"
           subtitle="Full right-to-left typesetting for Arabic, Hebrew, Persian and more — with mirrored UI affordances and proper bidi handling."
-          imageSrc="https://placehold.co/1200x600?text=RTL+Support"
-          imageAlt="RTL language support preview"
-        />
+        >
+          <img
+            src="https://placehold.co/1200x600?text=RTL+Support"
+            alt="RTL language support preview"
+            style={{ display: "block", width: "100%", height: "auto" }}
+          />
+        </FeatureSection>
         <ValueProp>
           <section>
             <h2>It’s writing-focused.</h2>
