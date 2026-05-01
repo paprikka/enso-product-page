@@ -5,4 +5,18 @@
   justify-content: flex-start;
   align-items: center;
   width: 100%;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  aspect-ratio: 1284 / 925;
+  background: url("/demons.png") top right / contain no-repeat;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  z-index: 1;
 }
