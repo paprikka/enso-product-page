@@ -13,11 +13,11 @@
   --font-header: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
   --font-ui: var(--font-header);
   --page-width: 45rem;
-  --font-size: 18px;
+  --font-size: 16px;
   --page-margin: 1rem;
 
   @media all and (min-width: 415px) {
-    --font-size: 22px;
+    --font-size: 20px;
   }
 }
 ::selection {

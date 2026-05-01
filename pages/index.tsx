@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Fade } from "../components/fade";
+import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
 import { Preview } from "../components/preview";
@@ -48,7 +49,6 @@ const renderSocialMeta = (props: SocialMetaProps) => (
 export default function Home() {
   return (
     <div className={styles.container}>
-
       <Head>
         <link rel="icon" href="/favicon.jpg" />
         {renderSocialMeta({
@@ -63,7 +63,30 @@ export default function Home() {
       <PaperOverlay />
       <main className={styles.main}>
         <Hero />
-        <Preview />
+        <FeatureSection
+          title="Writing-first"
+          subtitle="A distraction-free canvas designed around the act of writing — nothing else competes for your attention."
+          imageSrc="https://placehold.co/1200x600?text=Writing-first"
+          imageAlt="Writing-first preview"
+        />
+        <FeatureSection
+          title="Coffeeshop Mode™"
+          subtitle="Ambient background sounds blend with your typing to recreate the focused buzz of a busy café, wherever you are."
+          imageSrc="https://placehold.co/1200x600?text=Coffeeshop+Mode"
+          imageAlt="Coffeeshop Mode preview"
+        />
+        <FeatureSection
+          title="6 Accessible Themes"
+          subtitle="Six carefully tuned colour schemes — including high-contrast and low-light options — meet WCAG contrast standards out of the box."
+          imageSrc="https://placehold.co/1200x600?text=Accessible+Themes"
+          imageAlt="Accessible themes preview"
+        />
+        <FeatureSection
+          title="RTL language support"
+          subtitle="Full right-to-left typesetting for Arabic, Hebrew, Persian and more — with mirrored UI affordances and proper bidi handling."
+          imageSrc="https://placehold.co/1200x600?text=RTL+Support"
+          imageAlt="RTL language support preview"
+        />
         <ValueProp>
           <section>
             <h2>It’s writing-focused.</h2>

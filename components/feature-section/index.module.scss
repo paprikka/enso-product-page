@@ -1,0 +1,24 @@
+.section {
+  max-width: var(--page-width);
+  margin: 0 auto calc(var(--baseline) * 2rem);
+  padding: 0 calc(var(--baseline) * 1rem);
+}
+
+.title {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: calc(var(--baseline) * 1rem);
+  margin: 0 0 calc(var(--baseline) * 0.5rem);
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  margin: 0 0 calc(var(--baseline) * 1rem);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -11,14 +11,15 @@ export const Hero = () => {
         edit later.
       </h1>
       <section className={styles.description}>
-        <p>Ensō is a writing tool that helps you enter a state of flow.</p>
-
         <p>
-          It does this by separating writing from editing and thus making it
-          harder for you to edit yourself.
+          Give yourself permission to <em>think</em> before you <em>edit</em>.
+          <br />
+          Give your internal editor a break.
+          <br />
+          Get that first draft done!
         </p>
 
-        <HGroup>
+        <HGroup align="middle">
           <BuyButton><strong>Get Ensō</strong> for macOS</BuyButton>
         </HGroup>
       </section>
