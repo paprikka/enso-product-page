@@ -4,9 +4,8 @@ import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
 import { MockBrowser } from "../components/mock-browser";
-import { Preview } from "../components/preview";
+import { ThemeGallery } from "../components/theme-gallery";
 import { ValueProp } from "../components/value-proposition";
-import { PaperOverlay } from "../components/paper-overlay";
 import styles from "../styles/Home.module.css";
 
 type SocialMetaProps = {
@@ -61,7 +60,6 @@ export default function Home() {
         })}
       </Head>
 
-      <PaperOverlay />
       <main className={styles.main}>
         <Hero />
         <FeatureSection
@@ -107,13 +105,21 @@ export default function Home() {
         </FeatureSection>
         <FeatureSection
           title="6 Accessible Themes"
-          subtitle="Six carefully tuned colour schemes — including high-contrast and low-light options — meet WCAG contrast standards out of the box."
+          subtitle={
+            <>
+              Themes were designed for specific use cases (writing in the sun,
+              writing late) or familiarity. More information{" "}
+              <a
+                href="https://untested.sonnet.io/notes/enso-themes-accessible-vampiric-cozy/"
+                target="_blank"
+              >
+                here
+              </a>
+              .
+            </>
+          }
         >
-          <img
-            src="https://placehold.co/1200x600?text=Accessible+Themes"
-            alt="Accessible themes preview"
-            style={{ display: "block", width: "100%", height: "auto" }}
-          />
+          <ThemeGallery />
         </FeatureSection>
         <FeatureSection
           title="RTL language support"

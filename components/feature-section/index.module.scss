@@ -14,9 +14,17 @@
   font-weight: 600;
   line-height: calc(var(--baseline) * 1rem);
   margin: 0 0 calc(var(--baseline) * 0.5rem);
+
+  &:not(:has(+ .subtitle)) {
+    margin-bottom: calc(var(--baseline) * 1.5rem);
+  }
 }
 
 .subtitle {
   font-size: 1.25rem;
   margin: 0 0 calc(var(--baseline) * 1rem);
+
+  a {
+    text-decoration: underline;
+  }
 }

@@ -26,7 +26,7 @@
 }
 
 .coffeeshop {
-  background: #F9F0E7;
+  background: #f9f0e7;
   color: var(--color-text);
   padding-top: calc(var(--baseline) * 2rem + 50px);
   padding-bottom: calc(var(--baseline) * 2rem + 50px);

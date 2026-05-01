@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 
 type Props = {
   title: string;
-  subtitle: ReactNode;
+  subtitle?: ReactNode;
   children: ReactNode;
   className?: string;
 };
@@ -19,7 +19,7 @@ export const FeatureSection = ({
   >
     <div className={styles.inner}>
       <h2 className={styles.title}>{title}</h2>
-      <p className={styles.subtitle}>{subtitle}</p>
+      {subtitle && <div className={styles.subtitle}>{subtitle}</div>}
       {children}
     </div>
   </section>
