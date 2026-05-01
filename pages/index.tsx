@@ -84,12 +84,24 @@ export default function Home() {
         </FeatureSection>
         <FeatureSection
           title="Coffeeshop Mode™"
-          subtitle="Ambient background sounds blend with your typing to recreate the focused buzz of a busy café, wherever you are."
+          subtitle={
+            <>
+              Quickly toggle between visible and{" "}
+              <span style={{ fontWeight: 700, letterSpacing: "0.125rem" }}>
+                ݀ · · · · ·
+              </span>{" "}
+              text.
+              <br />
+              Excellent for writing in crowded or small spaces.
+              <br />
+              (or just giving you more privacy)
+            </>
+          }
         >
-          <img
-            src="https://placehold.co/1200x600?text=Coffeeshop+Mode"
-            alt="Coffeeshop Mode preview"
-            style={{ display: "block", width: "100%", height: "auto" }}
+          <MockBrowser
+            imageSrc="/coffeeshop.png"
+            imageAlt="Coffeeshop Mode preview"
+            title="Ensō"
           />
         </FeatureSection>
         <FeatureSection
