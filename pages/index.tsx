@@ -83,6 +83,7 @@ export default function Home() {
           />
         </FeatureSection>
         <FeatureSection
+          className={styles.coffeeshop}
           title="Coffeeshop Mode™"
           subtitle={
             <>

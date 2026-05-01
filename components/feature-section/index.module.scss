@@ -1,6 +1,10 @@
 .section {
+  margin: 0 0 calc(var(--baseline) * 2rem);
+}
+
+.inner {
   max-width: var(--page-width);
-  margin: 0 auto calc(var(--baseline) * 2rem);
+  margin: 0 auto;
   padding: 0 calc(var(--baseline) * 1rem);
 }
 

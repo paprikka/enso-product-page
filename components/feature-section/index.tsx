@@ -5,12 +5,22 @@ type Props = {
   title: string;
   subtitle: ReactNode;
   children: ReactNode;
+  className?: string;
 };
 
-export const FeatureSection = ({ title, subtitle, children }: Props) => (
-  <section className={styles.section}>
-    <h2 className={styles.title}>{title}</h2>
-    <p className={styles.subtitle}>{subtitle}</p>
-    {children}
+export const FeatureSection = ({
+  title,
+  subtitle,
+  children,
+  className,
+}: Props) => (
+  <section
+    className={`${styles.section}${className ? ` ${className}` : ""}`}
+  >
+    <div className={styles.inner}>
+      <h2 className={styles.title}>{title}</h2>
+      <p className={styles.subtitle}>{subtitle}</p>
+      {children}
+    </div>
   </section>
 );

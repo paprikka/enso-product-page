@@ -20,3 +20,14 @@
   pointer-events: none;
   z-index: 1;
 }
+
+.main {
+  width: 100%;
+}
+
+.coffeeshop {
+  background: #F9F0E7;
+  color: var(--color-text);
+  padding-top: calc(var(--baseline) * 2rem);
+  padding-bottom: calc(var(--baseline) * 2rem);
+}
