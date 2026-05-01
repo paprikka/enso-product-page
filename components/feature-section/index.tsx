@@ -1,8 +1,9 @@
+import { ReactNode } from "react";
 import styles from "./index.module.scss";
 
 type Props = {
   title: string;
-  subtitle: string;
+  subtitle: ReactNode;
   imageSrc: string;
   imageAlt: string;
 };

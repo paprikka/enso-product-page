@@ -65,8 +65,15 @@ export default function Home() {
         <Hero />
         <FeatureSection
           title="Writing-first"
-          subtitle="A distraction-free canvas designed around the act of writing — nothing else competes for your attention."
-          imageSrc="https://placehold.co/1200x600?text=Writing-first"
+          subtitle={
+            <>
+              Ensō is a writing tool that helps you enter a state of flow.
+              <br />
+              It does this by separating writing from editing and thus making it
+              harder for you to edit yourself.
+            </>
+          }
+          imageSrc="/light-1.png"
           imageAlt="Writing-first preview"
         />
         <FeatureSection
