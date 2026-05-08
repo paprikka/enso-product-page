@@ -17,6 +17,7 @@
   margin: 0;
   font-size: 3rem;
   line-height: calc(var(--baseline) * 2rem);
+  text-wrap: balance;
 
   @media all and (min-width: 415px) {
     font-size: 5rem;

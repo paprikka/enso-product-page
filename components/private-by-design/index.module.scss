@@ -30,6 +30,7 @@
   position: relative;
   display: grid;
   gap: calc(var(--baseline) * 0.5rem);
+  text-wrap: balance;
 }
 
 .title {
