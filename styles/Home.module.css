@@ -28,6 +28,7 @@
 .featureNote {
   font-size: 1.25rem;
   margin: calc(var(--baseline) * 1rem) 0 0;
+  text-wrap: balance;
 }
 
 .featureNote:first-of-type {

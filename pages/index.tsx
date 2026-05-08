@@ -68,11 +68,15 @@ export default function Home() {
           title="Writing-first"
           subtitle={
             <>
-              Ensō is a writing tool that helps you enter a state of flow.
-              <br />
-              How? It forces you to <em>write</em> and <em>think</em> before
-              editing. That makes it harder for you to <em>overthink</em> or{" "}
-              <em>edit yourself</em>.
+              <p>
+                The text <Fade text="fades away" /> as you type so you can focus
+                on <em>what</em> you want to say instead of <em>how</em> you
+                want to say it.
+              </p>
+              <p>
+                You can’t select or edit text, but you can download and review
+                it once you’re done.
+              </p>
             </>
           }
         >
@@ -81,15 +85,6 @@ export default function Home() {
             imageAlt="Writing-first preview"
             title="Ensō"
           />
-          <p className={styles.featureNote}>
-            The text <Fade text="fades away" /> as you type so you can focus on{" "}
-            <em>what</em> you want to say instead of <em>how</em> you want to
-            say it.
-          </p>
-          <p className={styles.featureNote}>
-            You can’t select or edit text, but you can download and review it
-            once you’re done.
-          </p>
         </FeatureSection>
         <WhoWhat />
         <FeatureSection

@@ -1,30 +1,32 @@
 {
   "permissions": {
     "allow": [
+      "Bash(git:*)",
+      "Bash(pnpm:*)",
+      "Bash(pbcopy:*)",
+      "Bash(vercel:*)",
       "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(mv:*)",
+      "Bash(open:*)",
+      "Bash(openssl:*)",
+      "Bash(direnv:*)",
+      "Bash(docker:*)",
+      "Bash(/Users/raf/.claude/skills/commit_message/commit_message.sh)",
       "mcp__context7__query-docs",
+      "mcp__stripe__*",
       "WebFetch(domain:docs.stripe.com)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page log --oneline -20)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page show 64b1555 --stat)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page show 64b1555)",
-      "Bash(pnpm exec playwright:*)",
       "WebFetch(domain:docs.bunny.net)",
       "WebFetch(domain:support.bunny.net)",
-      "Bash(/Users/raf/.claude/skills/commit_message/commit_message.sh)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page log --oneline -10)",
-      "Bash(git -C /Users/raf/Developer/enso/old/enso-product-page commit -m \"feat: add signed download flow with token auth and error page\")",
-      "Bash(pbcopy:*)",
       "WebFetch(domain:resend.com)",
-      "Bash(vercel project:*)",
-      "Bash(vercel domains:*)",
-      "Bash(vercel env:*)",
-      "mcp__stripe__get_stripe_account_info",
-      "mcp__stripe__list_products",
-      "mcp__stripe__list_prices",
-      "mcp__stripe__retrieve_balance",
-      "Bash(which vercel:*)",
-      "Bash(vercel ls:*)"
+      "WebFetch(domain:registry.npmjs.org)",
+      "WebFetch(domain:telemetry.vercel.com)",
+      "WebFetch(domain:api.vercel.com)"
     ],
     "deny": []
+  },
+  "sandbox": {
+    "enabled": true,
+    "autoAllowBashIfSandboxed": true
   }
 }
