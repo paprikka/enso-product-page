@@ -4,6 +4,7 @@ import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
 import { MockBrowser } from "../components/mock-browser";
+import { PrivateByDesign } from "../components/private-by-design";
 import { ThemeGallery } from "../components/theme-gallery";
 import { ValueProp } from "../components/value-proposition";
 import styles from "../styles/Home.module.css";
@@ -131,6 +132,7 @@ export default function Home() {
             style={{ display: "block", width: "100%", height: "auto" }}
           />
         </FeatureSection>
+        <PrivateByDesign />
         <ValueProp>
           <section>
             <h2>It’s writing-focused.</h2>

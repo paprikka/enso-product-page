@@ -1,0 +1,60 @@
+.section {
+  margin: 0 0 calc(var(--baseline) * 2rem);
+}
+
+.inner {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: 0 calc(var(--baseline) * 1rem);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: calc(var(--baseline) * 1rem);
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 4fr 3fr;
+    gap: calc(var(--baseline) * 1.5rem);
+  }
+}
+
+// TODO: unify this overhang with theme-gallery via a feature-section prop
+.imageLeft {
+  margin: -1rem;
+  display: block;
+  width: 100%;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.content {
+  position: relative;
+  display: grid;
+  gap: calc(var(--baseline) * 0.5rem);
+}
+
+.title {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: calc(var(--baseline) * 1rem);
+  margin: 0 0 calc(var(--baseline) * 0.5rem);
+}
+
+.more {
+  margin-block-end: 2rem;
+  a {
+    text-decoration: underline;
+  }
+}
+.imageMe {
+  justify-self: end;
+  width: 40%;
+  max-width: 4rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
