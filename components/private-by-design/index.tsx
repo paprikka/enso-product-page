@@ -25,7 +25,9 @@ export const PrivateByDesign = () => (
           </a>
         </p>
         <div className={styles.imageMe}>
-          <img src="/me-private-footer.png" alt="" />
+          <a href="https://sonnet.io" target="_blank" rel="noreferrer">
+            <img src="/me-private-footer.png" alt="" />
+          </a>
         </div>
       </div>
     </div>

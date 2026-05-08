@@ -7,6 +7,7 @@ import { MockBrowser } from "../components/mock-browser";
 import { PrivateByDesign } from "../components/private-by-design";
 import { ThemeGallery } from "../components/theme-gallery";
 import { ValueProp } from "../components/value-proposition";
+import { WhoWhat } from "../components/who-what";
 import styles from "../styles/Home.module.css";
 
 type SocialMetaProps = {
@@ -133,6 +134,7 @@ export default function Home() {
           />
         </FeatureSection>
         <PrivateByDesign />
+        <WhoWhat />
         <ValueProp>
           <section>
             <h2>It’s writing-focused.</h2>
