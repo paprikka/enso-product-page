@@ -6,10 +6,17 @@ type Props = {
   imageAlt?: string;
   title?: string;
   children?: ReactNode;
+  dark?: boolean;
 };
 
-export const MockBrowser = ({ imageSrc, imageAlt, title, children }: Props) => (
-  <div className={styles.window}>
+export const MockBrowser = ({
+  imageSrc,
+  imageAlt,
+  title,
+  children,
+  dark,
+}: Props) => (
+  <div className={`${styles.window}${dark ? ` ${styles.dark}` : ""}`}>
     <div className={styles.titleBar}>
       <div className={styles.dots}>
         <span className={styles.dot} />

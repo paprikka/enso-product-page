@@ -91,6 +91,7 @@ export default function Home() {
             once you’re done.
           </p>
         </FeatureSection>
+        <WhoWhat />
         <FeatureSection
           className={styles.coffeeshop}
           title="Coffeeshop Mode™"
@@ -112,6 +113,7 @@ export default function Home() {
             imageSrc="/coffeeshop.png"
             imageAlt="Coffeeshop Mode preview"
             title="Ensō"
+            dark
           />
         </FeatureSection>
         <FeatureSection
@@ -133,13 +135,12 @@ export default function Home() {
           <ThemeGallery />
         </FeatureSection>
         <FeatureSection
-          title="RTL language support"
-          subtitle="Full right-to-left typesetting for Arabic, Hebrew, Persian and more — with mirrored UI affordances and proper bidi handling."
+          title="Non-Latin language support"
+          subtitle="Custom language-specific typography, improved bidi handling."
         >
           <LanguageSlides />
         </FeatureSection>
         <PrivateByDesign />
-        <WhoWhat />
       </main>
 
       <Footer />

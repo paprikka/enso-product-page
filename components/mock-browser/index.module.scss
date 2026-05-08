@@ -1,10 +1,18 @@
 .window {
   --mock-browser-border-color: #000;
+  --mock-browser-title-bg: transparent;
+  --mock-browser-bg: var(--color-page);
 
   border: 1px solid var(--mock-browser-border-color);
   border-radius: 8px;
   overflow: hidden;
-  background: var(--color-page);
+  background: var(--mock-browser-bg);
+}
+
+.dark {
+  --mock-browser-border-color: #fff;
+  --mock-browser-title-bg: rgba(255, 255, 255, 0.05);
+  --mock-browser-bg: transparent;
 }
 
 .titleBar {
@@ -13,6 +21,7 @@
   align-items: center;
   padding: 0.375rem 0.5625rem;
   border-bottom: 1px solid var(--mock-browser-border-color);
+  background: var(--mock-browser-title-bg);
 }
 
 .dots {
@@ -47,4 +56,8 @@
   display: block;
   width: 100%;
   height: auto;
+}
+
+.dark .image {
+  filter: invert(1);
 }
