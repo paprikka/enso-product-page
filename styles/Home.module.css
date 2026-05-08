@@ -25,6 +25,15 @@
   width: 100%;
 }
 
+.featureNote {
+  font-size: 1.25rem;
+  margin: calc(var(--baseline) * 1rem) 0 0;
+}
+
+.featureNote:first-of-type {
+  margin-top: calc(var(--baseline) * 1.5rem);
+}
+
 .coffeeshop {
   background: #f9f0e7;
   color: var(--color-text);

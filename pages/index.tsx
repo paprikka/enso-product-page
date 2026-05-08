@@ -6,7 +6,6 @@ import { Hero } from "../components/hero";
 import { MockBrowser } from "../components/mock-browser";
 import { PrivateByDesign } from "../components/private-by-design";
 import { ThemeGallery } from "../components/theme-gallery";
-import { ValueProp } from "../components/value-proposition";
 import { WhoWhat } from "../components/who-what";
 import styles from "../styles/Home.module.css";
 
@@ -81,6 +80,14 @@ export default function Home() {
             imageAlt="Writing-first preview"
             title="Ensō"
           />
+          <p className={styles.featureNote}>
+            The text <Fade text="fades away" /> as you type so you can focus on
+            what you want to say instead of how you want to say it.
+          </p>
+          <p className={styles.featureNote}>
+            You can’t select or edit text, but you can download and review it
+            once you’re done.
+          </p>
         </FeatureSection>
         <FeatureSection
           className={styles.coffeeshop}
@@ -135,29 +142,6 @@ export default function Home() {
         </FeatureSection>
         <PrivateByDesign />
         <WhoWhat />
-        <ValueProp>
-          <section>
-            <h2>It’s writing-focused.</h2>
-            <p>
-              The text <Fade text="fades away" /> as you type so you can focus
-              on what you want to say instead of how you want to say it.
-            </p>
-            <p>
-              You can’t select or edit text, but you can download and review it
-              once you’re done.
-            </p>
-          </section>
-          <section>
-            <h2>It's easy.</h2>
-          </section>
-          <section>
-            <h2>It's private.</h2>
-            <p>
-              All of your changes are saved locally. Ensō works perfectly fine
-              even without internet connection.
-            </p>
-          </section>
-        </ValueProp>
       </main>
 
       <Footer />
