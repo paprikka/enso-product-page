@@ -81,8 +81,9 @@ export default function Home() {
             title="Ensō"
           />
           <p className={styles.featureNote}>
-            The text <Fade text="fades away" /> as you type so you can focus on
-            what you want to say instead of how you want to say it.
+            The text <Fade text="fades away" /> as you type so you can focus on{" "}
+            <em>what</em> you want to say instead of <em>how</em> you want to
+            say it.
           </p>
           <p className={styles.featureNote}>
             You can’t select or edit text, but you can download and review it
