@@ -3,6 +3,7 @@ import { Fade } from "../components/fade";
 import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
 import { Hero } from "../components/hero";
+import { LanguageSlides } from "../components/language-slides";
 import { MockBrowser } from "../components/mock-browser";
 import { PrivateByDesign } from "../components/private-by-design";
 import { ThemeGallery } from "../components/theme-gallery";
@@ -135,11 +136,7 @@ export default function Home() {
           title="RTL language support"
           subtitle="Full right-to-left typesetting for Arabic, Hebrew, Persian and more — with mirrored UI affordances and proper bidi handling."
         >
-          <img
-            src="https://placehold.co/1200x600?text=RTL+Support"
-            alt="RTL language support preview"
-            style={{ display: "block", width: "100%", height: "auto" }}
-          />
+          <LanguageSlides />
         </FeatureSection>
         <PrivateByDesign />
         <WhoWhat />
