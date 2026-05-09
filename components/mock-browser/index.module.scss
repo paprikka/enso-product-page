@@ -1,5 +1,11 @@
 .window {
-  --mock-browser-border-color: #000;
+  --mock-browser-border-rgb: 0, 0, 0;
+  --mock-browser-border-opacity: 1;
+  --mock-browser-border-color: rgba(
+    var(--mock-browser-border-rgb),
+    var(--mock-browser-border-opacity)
+  );
+  --mock-browser-title-opacity: 1;
   --mock-browser-title-bg: transparent;
   --mock-browser-bg: var(--color-page);
 
@@ -10,7 +16,9 @@
 }
 
 .dark {
-  --mock-browser-border-color: #fff;
+  --mock-browser-border-rgb: 255, 255, 255;
+  --mock-browser-border-opacity: 0.2;
+  --mock-browser-title-opacity: 0.3;
   --mock-browser-title-bg: rgba(255, 255, 255, 0.05);
   --mock-browser-bg: transparent;
 }
@@ -50,6 +58,7 @@
   text-align: center;
   font-family: var(--font-ui);
   font-size: 0.6375rem;
+  opacity: var(--mock-browser-title-opacity);
 }
 
 .image {

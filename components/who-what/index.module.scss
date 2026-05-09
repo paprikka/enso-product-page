@@ -37,6 +37,12 @@
   display: grid;
   gap: calc(var(--baseline) * 0.75rem);
   text-wrap: balance;
+  grid-template-areas:
+    "who"
+    "think"
+    "what"
+    "whatBody"
+    "tree";
 
   @media (min-width: 768px) {
     grid-template-columns: 1fr auto 1fr;
@@ -51,11 +57,15 @@
   }
 }
 
+.who      { grid-area: who; }
+.think    { grid-area: think; }
+.what     { grid-area: what; }
+.whatBody { grid-area: whatBody; }
+
 @media (min-width: 768px) {
-  .who      { grid-area: who; }
-  .think    { grid-area: think; align-self: end; }
-  .what     { grid-area: what; text-align: right; align-self: center; }
-  .whatBody { grid-area: whatBody; text-align: right; }
+  .think    { align-self: end; }
+  .what     { text-align: right; align-self: center; }
+  .whatBody { text-align: right; }
 }
 
 .title {
@@ -72,20 +82,20 @@
 }
 
 .tree {
+  grid-area: tree;
   display: block;
   width: 40%;
   max-width: 16rem;
   height: auto;
-  margin: calc(var(--baseline) * 1rem) auto;
+  margin: calc(var(--baseline) * 1rem) auto calc(var(--baseline) * -2rem - 50px);
   mix-blend-mode: multiply;
+  align-self: end;
+  justify-self: center;
 
   @media (min-width: 768px) {
-    grid-area: tree;
     width: auto;
     max-width: none;
     max-height: 32rem;
     margin: 0 0 calc(var(--baseline) * -2rem - 50px);
-    align-self: end;
-    justify-self: center;
   }
 }

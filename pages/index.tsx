@@ -93,8 +93,8 @@ export default function Home() {
           subtitle={
             <>
               Quickly toggle between visible and{" "}
-              <span style={{ fontWeight: 700, letterSpacing: "0.125rem" }}>
-                ݀ · · · · ·
+              <span className={styles.coffeeshopMask}>
+                · · · · ·
               </span>{" "}
               text.
               <br />
