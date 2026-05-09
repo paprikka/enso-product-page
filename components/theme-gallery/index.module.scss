@@ -59,11 +59,11 @@
 }
 
 .item strong {
-  font-weight: 600;
+  font-weight: 500;
   display: block;
 }
 
-.item span {
+.item > span {
   display: block;
   font-size: 0.75em;
 }
