@@ -1,6 +1,6 @@
 .container {
   max-width: var(--page-width);
-  margin: 0 auto;
+  margin: 0 auto calc(var(--baseline) * 2rem);
   padding: calc(var(--baseline) * 1rem);
   text-align: center;
   display: flex;

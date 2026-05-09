@@ -92,11 +92,8 @@ export default function Home() {
           title="Coffeeshop Mode™"
           subtitle={
             <>
-              Quickly toggle between visible and{" "}
-              <span className={styles.coffeeshopMask}>
-                · · · · ·
-              </span>{" "}
-              text.
+              Quickly toggle between visible and
+              <span className={styles.coffeeshopMask}> · · · · ·</span> text.
               <br />
               Excellent for writing in crowded or small spaces.
               <br />
