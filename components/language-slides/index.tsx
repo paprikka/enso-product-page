@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MockBrowser } from "../mock-browser";
+import { SlideTabs } from "./slide-tabs";
 import styles from "./index.module.scss";
 
 const slides = [
@@ -36,19 +37,12 @@ export const LanguageSlides = () => {
             loading={i === 0 ? "eager" : "lazy"}
           />
         ))}
-        <div className={styles.dots} role="tablist" aria-label="Language slides">
-          {slides.map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              role="tab"
-              aria-selected={i === active}
-              aria-label={`Show slide ${i + 1}`}
-              className={`${styles.dot} ${i === active ? styles.dotActive : ""}`}
-              onClick={() => setActive(i)}
-            />
-          ))}
-        </div>
+        <SlideTabs
+          count={slides.length}
+          active={active}
+          onSelect={setActive}
+          label="Language slides"
+        />
       </div>
     </MockBrowser>
   );
