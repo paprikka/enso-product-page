@@ -2,6 +2,10 @@
   position: relative;
   aspect-ratio: 2880 / 1800;
   overflow: hidden;
+
+  &:hover {
+    --dots-scale: 0.75;
+  }
 }
 
 .slide {
