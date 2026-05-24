@@ -111,7 +111,7 @@ export default function Home() {
         </FeatureSection>
         <FeatureSection
           spacious
-          title="6 Accessible Themes"
+          title="Six Accessible Themes"
           subtitle={
             <>
               Themes were designed for specific use cases (writing in the sun,
