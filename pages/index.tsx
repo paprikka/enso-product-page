@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { CTA } from "../components/cta";
 import { Fade } from "../components/fade";
 import { FeatureSection } from "../components/feature-section";
 import { Footer } from "../components/footer";
@@ -135,6 +136,7 @@ export default function Home() {
           <LanguageSlides />
         </FeatureSection>
         <PrivateByDesign />
+        <CTA />
       </main>
 
       <Footer />

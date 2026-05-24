@@ -17,15 +17,16 @@ export const WhoWhat = () => (
             target="_blank"
             rel="noreferrer"
           >
-            <em>untested.sonnet.io/notes/how-people-use-enso</em>
+            <em>
+              <strong>untested.sonnet.io/notes/how-people-use-enso</strong>
+            </em>
           </a>
         </p>
       </div>
 
       <p className={styles.think}>
-        If you <em>write to think</em> or{" "}
-        <em>think too much when writing</em> <strong>Ensō</strong> might be for
-        you.
+        If you <em>write to think</em> or <em>think too much when writing</em>{" "}
+        <strong>Ensō</strong> might be for you.
       </p>
 
       <img className={styles.tree} src="/red-sun.png" alt="" />
