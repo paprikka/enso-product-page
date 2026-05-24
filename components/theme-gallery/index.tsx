@@ -9,7 +9,12 @@ type Theme = {
 };
 
 const themes: Theme[] = [
-  { name: "Black and White", caption: "bright sunlight", fg: "black", bg: "white" },
+  {
+    name: "Black and White",
+    caption: "bright sunlight",
+    fg: "black",
+    bg: "white",
+  },
   { name: "Light", caption: "familiar, readable", fg: "#000", bg: "#FAFAFA" },
   { name: "Sepia", caption: "familiar, readable", fg: "#444", bg: "#F9F0E7" },
   {
@@ -29,9 +34,17 @@ const themes: Theme[] = [
     name: "Midnight",
     caption: (
       <>
+        reduces overall light emissions
+        <br />
         reduces blue light emissions
         <br />
-        great for writing and thinking late
+        great for writing and{" "}
+        <a
+          href="https://untested.sonnet.io/notes/obsidian-for-vampires/#:~:text=Backlinks"
+          target="_blank"
+        >
+          thinking late
+        </a>
       </>
     ),
     fg: "#C5261B",
