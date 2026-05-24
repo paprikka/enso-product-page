@@ -57,7 +57,7 @@ export default function Home() {
         {renderSocialMeta({
           description:
             "Ensō is a writing tool that helps you enter a state of flow.",
-          title: "Ensō—write now, edit later.",
+          title: "Ensō—Write now, edit later.",
           image: "https://enso.sonnet.io/social-icon.png",
           url: "https://enso.sonnet.io",
         })}
@@ -131,7 +131,7 @@ export default function Home() {
         <FeatureSection
           spacious
           title="Non-Latin language support"
-          subtitle="Custom language-specific typography, improved bidi handling."
+          subtitle="Custom language-specific typography, improved bidirectional text handling."
         >
           <LanguageSlides />
         </FeatureSection>

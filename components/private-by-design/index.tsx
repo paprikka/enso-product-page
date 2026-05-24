@@ -11,8 +11,8 @@ export const PrivateByDesign = () => (
           Everything you do stays on your device.
         </p>
         <p>
-          7 years, millions of words, and thousands of users later I still talk
-          with users directly. It’s not that hard.
+          7 years, millions of words, and thousands of users later, I still
+          talk with users directly. It’s not that hard.
         </p>
         <p className={styles.more}>
           More on:{" "}

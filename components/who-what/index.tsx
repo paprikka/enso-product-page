@@ -25,7 +25,7 @@ export const WhoWhat = () => (
       </div>
 
       <p className={styles.think}>
-        If you <em>write to think</em> or <em>think too much when writing</em>{" "}
+        If you <em>write to think</em> or <em>think too much when writing</em>,{" "}
         <strong>Ensō</strong> might be for you.
       </p>
 
