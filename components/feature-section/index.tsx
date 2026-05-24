@@ -6,6 +6,7 @@ type Props = {
   subtitle?: ReactNode;
   children: ReactNode;
   className?: string;
+  spacious?: boolean;
 };
 
 export const FeatureSection = ({
@@ -13,9 +14,10 @@ export const FeatureSection = ({
   subtitle,
   children,
   className,
+  spacious,
 }: Props) => (
   <section
-    className={`${styles.section}${className ? ` ${className}` : ""}`}
+    className={`${spacious ? styles.sectionSpacious : styles.section}${className ? ` ${className}` : ""}`}
   >
     <div className={styles.inner}>
       <h2 className={styles.title}>{title}</h2>

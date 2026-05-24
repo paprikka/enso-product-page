@@ -109,6 +109,7 @@ export default function Home() {
           />
         </FeatureSection>
         <FeatureSection
+          spacious
           title="6 Accessible Themes"
           subtitle={
             <>
@@ -127,6 +128,7 @@ export default function Home() {
           <ThemeGallery />
         </FeatureSection>
         <FeatureSection
+          spacious
           title="Non-Latin language support"
           subtitle="Custom language-specific typography, improved bidi handling."
         >

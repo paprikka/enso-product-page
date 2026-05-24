@@ -2,6 +2,10 @@
   margin: 0 0 calc(var(--baseline) * 2rem);
 }
 
+.sectionSpacious {
+  margin: 0 0 calc(var(--baseline) * 3rem);
+}
+
 .inner {
   max-width: var(--page-width);
   margin: 0 auto;
