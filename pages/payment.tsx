@@ -4,6 +4,10 @@ import { encryptToken } from "../lib/download-token";
 import { sendReceiptEmail } from "../lib/send-receipt-email";
 import ErrorPage from "../components/error-page/ErrorPage";
 
+export const config = {
+  maxDuration: 60,
+};
+
 export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const sessionId = query.session_id as string;
   if (!sessionId) return { props: { error: true } };
