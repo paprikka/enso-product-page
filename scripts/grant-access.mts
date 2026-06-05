@@ -12,7 +12,7 @@ const root = resolve(__dirname, '..')
 function loadEnv() {
   const envPath = resolve(root, '.env.local')
   if (!existsSync(envPath)) {
-    console.error('.env.local not found — copy .env.example and fill in DOWNLOAD_TOKEN_SECRET + SITE_URL')
+    console.error('.env.local not found — copy .env.example and fill in DOWNLOAD_TOKEN_SECRET + PUBLIC_SITE_URL')
     process.exit(1)
   }
   for (const line of readFileSync(envPath, 'utf8').split('\n')) {
@@ -45,9 +45,36 @@ const { values, positionals } = parseArgs({
   },
 })
 
-const siteUrl = process.env.SITE_URL ?? 'https://enso.sonnet.io'
+// Canonical public origin baked into emailed links. Required and instance-independent:
+// never SITE_URL, which is localhost in dev / the deployed origin on Vercel.
+function resolveSiteUrl(): string {
+  const raw = process.env.PUBLIC_SITE_URL
+  if (!raw) {
+    console.error('PUBLIC_SITE_URL not set — add it to .env.local (e.g. https://enso.sonnet.io)')
+    process.exit(1)
+  }
 
-function grantAccess(email: string): string {
+  let url: URL
+  try {
+    url = new URL(raw)
+  } catch {
+    console.error(`PUBLIC_SITE_URL is not a valid URL: ${raw}`)
+    process.exit(1)
+  }
+
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+    console.error(`PUBLIC_SITE_URL must be an http(s) URL: ${raw}`)
+    process.exit(1)
+  }
+  if (['localhost', '127.0.0.1', '::1'].includes(url.hostname)) {
+    console.error(`PUBLIC_SITE_URL must be a public URL, not localhost: ${raw}`)
+    process.exit(1)
+  }
+
+  return raw.replace(/\/$/, '')
+}
+
+function grantAccess(email: string, siteUrl: string): string {
   const ref = encryptToken({ email, sessionId: `gumroad-legacy:${email}` })
   return `${siteUrl}/thank-you?email=${encodeURIComponent(email)}&ref=${ref}`
 }
@@ -94,6 +121,8 @@ Options:
 async function main() {
   if (values.help) return usage()
 
+  const siteUrl = resolveSiteUrl()
+
   if (values.bulk) {
     const emails = readFileSync(resolve(root, values.bulk), 'utf8')
       .split('\n')
@@ -101,7 +130,7 @@ async function main() {
       .filter(l => l && !l.startsWith('#'))
 
     for (const email of emails) {
-      const url = grantAccess(email)
+      const url = grantAccess(email, siteUrl)
       console.log(`${email}\t${url}`)
       if (values['send-email']) await sendEmail(email, url)
     }
@@ -111,7 +140,7 @@ async function main() {
   const email = positionals[0]
   if (!email) return usage()
 
-  const url = grantAccess(email)
+  const url = grantAccess(email, siteUrl)
   console.log(url)
   if (values['send-email']) await sendEmail(email, url)
 }
