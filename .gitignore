@@ -35,3 +35,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# gumroad sales dump (contains buyer PII)
+gumroad-sales-dump.json
