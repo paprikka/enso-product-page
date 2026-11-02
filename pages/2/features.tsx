@@ -62,6 +62,17 @@ export default function Features() {
                 <td>
                   <kbd>
                     <kbd>⌘</kbd>
+                    <kbd>O</kbd>
+                  </kbd>
+                </td>
+                <td>
+                  Import a <code>.txt</code> or <code>.md</code> file
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <kbd>
+                    <kbd>⌘</kbd>
                     <kbd>C</kbd>
                   </kbd>
                 </td>
@@ -222,6 +233,12 @@ export default function Features() {
             <dt>Save</dt>
             <dd>
               Exports as <em>note-DD-MM-SS.md</em>
+            </dd>
+
+            <dt>Import</dt>
+            <dd>
+              Opens a <code>.txt</code> or <code>.md</code> file{" "}
+              <em>(File &gt; Import…)</em>
             </dd>
 
             <dt>Copy</dt>
