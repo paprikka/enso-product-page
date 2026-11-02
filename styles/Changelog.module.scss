@@ -1,0 +1,50 @@
+.content {
+  margin-top: 2rem;
+
+  h3 {
+    font-size: 1.25rem;
+    margin: 2rem 0 0.5rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  ul {
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 0.25rem;
+  }
+
+  .tag {
+    display: inline-block;
+    margin-left: 0.25em;
+    padding: 0.3em 0.6em;
+    font-family: var(--font-ui);
+    font-size: 0.6em;
+    font-weight: 600;
+    line-height: 1;
+    vertical-align: 0.15em;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+    color: rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+  }
+
+  p {
+    margin: 2rem 0;
+    opacity: 0.6;
+  }
+
+  h3 + p {
+    margin-top: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    font-weight: 600;
+  }
+}
